@@ -1,0 +1,50 @@
+<?php $_shouldextend[1]=1; ?>
+
+<!-- Truyền giá trị cho những phần thay đổi -->
+<!-- yield(tên)  ~ section(tên, giá trị) -->
+<?php $this->startSection('title', 'Danh sách'); ?>
+
+<!-- yield(tên) ~ section(tên) nội dung endsection -->
+<?php $this->startSection('content-title', 'Product'); ?>
+<?php $this->startSection('content'); ?>
+<div class="content">
+ <div class="content">
+ <div class="card card-primary">
+ <div class="card-header">
+ <h3 class="card-title">Danh sách sản phẩm</h3>
+ </div>
+ <!-- /.card-header -->
+ <div class="card-body">
+ <table class="table table-bordered">
+ <thead>
+ <tr>
+ <th>ID</th>
+ <th>Name</th>
+ <th>Price</th>
+ <th>Views</th>
+ <th>Img</th>
+ <th>Categories</th>
+ <th>Content</th>
+ <th>Action</th>
+ <th>Status</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td><p>Còn hàng, Đang ở kho hàng, Đang trên đường, Đã nhận hàng</p></td>
+ </tr>
+ </tbody>
+ </div>
+ </div>
+ </div>
+</div>
+<?php $this->stopSection(); ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('layouts.master'); } ?>
